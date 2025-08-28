@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bottom-0 w-full text-gray-600 py-4 font-roboto bg-white border-t mt-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <section className="flex justify-between flex-wrap gap-2">
+        <section className="flex justify-between flex-wrap gap-2 -ml-20">
           <div className="flex gap-2 items-center">
             <div>
               <Image src="/logos/Logo.png" width={150} height={50} alt="Logo" />
@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
           
           <div className="min-w-0">
-            <span className="font-bold block mb-2 font-montserrat">Quick Links</span>
+            <span className="font-bold block mb-2 font-montserrat text-lg text-black">Quick Links</span>
             <ul className="cursor-pointer space-y-1">
               <li className="hover:text-sky-500 transition-all duration-200">About Us</li>
               <li className="hover:text-sky-500 transition-all duration-200">Services</li>
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
           
           <div className="min-w-0">
-            <span className="font-bold font-montserrat block mb-2">Contact</span>
+            <span className="font-bold font-montserrat block mb-2 text-lg text-black">Contact</span>
             <ul className="space-y-1">
                 <li>malmonte@globalclink.com</li>
                 <li>+1 (929) 384-2944</li>
