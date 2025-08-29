@@ -157,53 +157,51 @@ const servicesData = [
 
 export default function Services() {
   return (
-    <div className="flex flex-col gap-20 items-center my-30">
-      <section className="flex flex-col gap-4 text-center max-w-2xl items-center">
-        <h2 className="font-roboto font-semibold text-4xl">Our Services </h2>
-        <p className="font montserrat text-xl text-gray-700">
+    <div className="flex flex-col gap-12 sm:gap-16 lg:gap-20 items-center my-16 sm:my-20 lg:my-30 px-4 sm:px-6 lg:px-8">
+      <section className="flex flex-col gap-4 sm:gap-6 text-center max-w-2xl items-center">
+        <h2 className="font-roboto font-semibold text-2xl sm:text-3xl lg:text-4xl text-neutral-900">Our Services</h2>
+        <p className="font-montserrat text-base sm:text-lg lg:text-2xl text-gray-700 font-extralight px-4">
           Global Communications Link offers a comprehensive suite of services to
           meet all your fiber optic cabling and network infrastructure needs.
-          Our expert team ensures top-quality solutions tailored to your
-          specific requirements.
         </p>
       </section>
 
-      <section className="grid grid-cols-3 justify-between gap-15">
+      <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-8 lg:gap-12 xl:gap-15 w-full max-w-7xl">
         {servicesData.map((service) => {
           const IconComponent = service.icon;
 
           return (
             <div
               key={service.id}
-              className="flex flex-col gap-12 shadow-2xl px-8 py-8 rounded-2xl max-w-sm"
+              className="flex flex-col gap-8 sm:gap-10 lg:gap-12 shadow-xl hover:shadow-2xl transition-all duration-200 px-6 sm:px-8 py-6 sm:py-8 rounded-2xl w-full max-w-sm"
             >
-              <div className="flex flex-col gap-5 my-4">
-                <div className="flex items-center gap-3">
-                  <span className="bg-sky-200 rounded-full p-3">
-                    <IconComponent className="text-sky-800" />
+              <div className="flex flex-col gap-4 sm:gap-5 my-2 sm:my-4">
+                <div className="flex items-start sm:items-center gap-3 flex-col sm:flex-row">
+                  <span className="bg-sky-200 rounded-full p-3 flex-shrink-0">
+                    <IconComponent className="text-sky-800 w-5 h-5 sm:w-6 sm:h-6" />
                   </span>
-                  <h2 className="font-roboto font-semibold text-2xl text-gray-700">
+                  <h2 className="font-roboto font-semibold text-lg sm:text-xl lg:text-2xl text-gray-700">
                     {service.title}
                   </h2>
                 </div>
                 <div>
-                  <p className="font-montserrat font-normal text-gray-700">
+                  <p className="font-montserrat font-normal text-sm sm:text-base text-gray-700">
                     {service.description}
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4 sm:gap-6">
                 {service.services.map((subService, index) => (
-                  <div key={index} className="flex flex-col gap-1">
-                    <span className="flex gap-3 items-center">
-                      <CircleCheck className="text-sky-500 size-5" />
-                      <h3 className="font-roboto font-semibold text-xl text-gray-700">
+                  <div key={index} className="flex flex-col gap-1 sm:gap-2">
+                    <span className="flex gap-3 items-start">
+                      <CircleCheck className="text-sky-500 w-5 h-5 mt-0.5 flex-shrink-0" />
+                      <h3 className="font-roboto font-semibold text-base sm:text-lg lg:text-xl text-gray-700">
                         {subService.title}
                       </h3>
                     </span>
                     <span className="ml-8">
-                      <p className="font-roboto text-gray-500 font-light">
+                      <p className="font-roboto text-gray-500 font-light text-sm sm:text-base">
                         {subService.description}
                       </p>
                     </span>
