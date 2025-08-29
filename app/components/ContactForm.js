@@ -45,7 +45,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Your Name"
-            className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 placeholder-gray-400 transition-all duration-200"
+            className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 placeholder-gray-400 transition-all duration-200"
             required
           />
         </div>
@@ -65,7 +65,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder="Your Email"
-            className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 placeholder-gray-400 transition-all duration-200"
+            className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 placeholder-gray-400 transition-all duration-200"
             required
           />
         </div>
@@ -85,7 +85,7 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="Your Phone Number"
-            className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 placeholder-gray-400 transition-all duration-200"
+            className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 placeholder-gray-400 transition-all duration-200"
           />
         </div>
 
@@ -104,7 +104,7 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder="Your Message"
             rows={5}
-            className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 placeholder-gray-400 resize-none transition-all duration-200"
+            className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 placeholder-gray-400 resize-none transition-all duration-200"
             required
           />
         </div>
@@ -113,7 +113,7 @@ export default function ContactForm() {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="w-full bg-blue-500 text-white py-4 px-6 text-lg rounded-md hover:bg-blue-600 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition-all duration-200 font-medium mt-4"
+          className="w-full bg-sky-500 text-white py-4 px-6 text-lg rounded-md hover:bg-blue-600 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition-all duration-200 font-medium mt-4"
         >
           Submit
         </button>

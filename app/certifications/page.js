@@ -11,7 +11,7 @@ const certifications = [
     icon: <ShieldCheck size={32} className="text-blue-700" />,
     title: "SST",
     subtitle: "Site Safety Training",
-    description: "Entrenamiento en seguridad para zonas de trabajo.",
+    description: "Workplace safety training.",
   },
   {
     icon: <ChevronsLeftRightEllipsis size={32} className="text-blue-700" />,
@@ -23,25 +23,25 @@ const certifications = [
     icon: <Cable size={32} className="text-blue-700" />,
     title: "FSM-16S",
     subtitle: "Fujikura Splicing Certification",
-    description: "Certificación en empalme de fibra óptica Fujikura.",
+    description: "Certified copper and fiber network technician.",
   },
   {
     icon: <GaugeCircle size={32} className="text-blue-700" />,
     title: "NOYES",
     subtitle: "M700 Certification",
-    description: "Uso de equipos de prueba y medición de fibra.",
+    description: "Using fiber test and measurement equipment.",
   },
   {
     icon: <Wrench size={32} className="text-blue-700" />,
     title: "3M",
     subtitle: "Installation Certification",
-    description: "Certificación en instalación de gráficas y vinilos.",
+    description: "Certification in graphics and vinyl installation.",
   },
   {
     icon: <AlertTriangle size={32} className="text-blue-700" />,
     title: "Confined Space",
     subtitle: "OSHA 1910.146",
-    description: "Conciencia de seguridad en espacios confinados.",
+    description: "Confined space safety awareness.",
   },
 ];
 
@@ -143,7 +143,7 @@ export default function Certifications() {
                 Licensing & Insurance
               </h3>
               <p className="font-montserrat font-normal text-gray-700">
-                <strong>licensed to operate across multiple states</strong> and
+                <strong>Licensed to operate across multiple states</strong> and
                 is fully insured. This means your project is protected under
                 professional coverage and executed by certified technicians
                 adhering to regulatory standards.

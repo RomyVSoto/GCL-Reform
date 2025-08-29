@@ -48,26 +48,40 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Botón de menú móvil */}
+        {/* Botón de menú móvil con animación */}
         <div className="md:hidden">
           <Button 
             variant="ghost" 
             size="sm"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="relative w-10 h-10 flex items-center justify-center"
           >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+            <div className="w-6 h-6 relative">
+              {/* Línea superior */}
+              <span 
+                className={`absolute left-0 top-1 w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${
+                  isMobileMenuOpen 
+                    ? 'rotate-45 translate-y-2' 
+                    : 'rotate-0 translate-y-0'
+                }`}
               />
-            </svg>
+              {/* Línea media */}
+              <span 
+                className={`absolute left-0 top-2.5 w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${
+                  isMobileMenuOpen 
+                    ? 'opacity-0 scale-0' 
+                    : 'opacity-100 scale-100'
+                }`}
+              />
+              {/* Línea inferior */}
+              <span 
+                className={`absolute left-0 top-4 w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${
+                  isMobileMenuOpen 
+                    ? '-rotate-45 -translate-y-2' 
+                    : 'rotate-0 translate-y-0'
+                }`}
+              />
+            </div>
           </Button>
         </div>
       </div>

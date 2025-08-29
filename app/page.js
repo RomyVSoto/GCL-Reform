@@ -96,7 +96,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row justify-center gap-8 lg:gap-16">
           <div className="flex flex-col gap-8 sm:gap-12 lg:gap-20 p-6 sm:p-8 border rounded-xl">
             <span className="bg-sky-500 rounded-xl px-8 sm:px-20 lg:px-40 py-4 mx-auto">
-              <Code className="text-white w-6 h-6 sm:w-8 sm:h-8" />
+              <Code className="text-white w-6 h-6 sm:w-12 sm:h-8" />
             </span>
             <span className="text-start flex flex-col gap-3 sm:gap-4">
               <h2 className="font-montserrat font-semibold text-xl sm:text-2xl lg:text-3xl">
