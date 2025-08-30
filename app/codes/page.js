@@ -107,7 +107,7 @@ export default function Codes() {
             {fiberOpticStandards.map((standard, index) => {
               const IconComponent = standard.icon;
               return (
-                <div key={index} className="flex p-3 md:p-4 gap-3 md:gap-4 border border-gray-300 rounded-xl shadow-xs max-w-full lg:max-w-lg items-start">
+                <div key={index} className="flex p-3 md:p-4 gap-3 md:gap-4 border border-gray-300 rounded-xl shadow-xs hover:shadow-xl transition-all duration-200 max-w-full lg:max-w-lg items-start">
                   <span className="p-2 md:p-4 bg-sky-100 rounded-md flex-shrink-0">
                     <IconComponent className="text-sky-800 size-5 md:size-6" />
                   </span>
@@ -138,7 +138,7 @@ export default function Codes() {
             {serverMaintenanceStandards.map((standard, index) => {
               const IconComponent = standard.icon;
               return (
-                <div key={index} className="flex p-3 md:p-4 gap-3 md:gap-4 border border-gray-300 rounded-xl shadow-xs max-w-full lg:max-w-lg items-start">
+                <div key={index} className="flex p-3 md:p-4 gap-3 md:gap-4 border border-gray-300 rounded-xl shadow-xs hover:shadow-xl transition-all duration-200 max-w-full lg:max-w-lg items-start">
                   <span className="p-2 md:p-4 bg-sky-100 rounded-md flex-shrink-0">
                     <IconComponent className="text-sky-800 size-5 md:size-6" />
                   </span>
