@@ -93,14 +93,14 @@ export default function Certifications() {
         </div>
       </section>
 
-      <section class="flex flex-col gap-10 bg-white py-12 px-6">
+      <section className="flex flex-col gap-10 bg-white py-12 px-6">
         <div>
-          <h2 class="font-roboto text-3xl font-bold font-roboto font-semibold text-3xl text-neutral-800 text-center">
+          <h2 className="font-roboto text-3xl font-bold font-roboto font-semibold text-3xl text-neutral-800 text-center">
             Our Commitment to Quality: Work Warranty
           </h2>
         </div>
-        <div class="max-w-4xl mx-auto">
-          <div class="flex flex-col gap-5 bg-gray-50 border border-sky-300 rounded-xl p-6 text-gray-700 leading-relaxed shadow-sm">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col gap-5 bg-gray-50 border border-sky-300 rounded-xl p-6 text-gray-700 leading-relaxed shadow-sm">
             <section className="flex flex-col">
               <h3 className="font-montserrat font-semibold text-lg text-neutral-800">
                 CDIS proudly stands behind the quality and reliability of our

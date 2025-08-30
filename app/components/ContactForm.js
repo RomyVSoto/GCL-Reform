@@ -10,6 +10,9 @@ export default function ContactForm() {
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [notification, setNotification] = useState({ message: "", type: "" });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -18,13 +21,54 @@ export default function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log("Form submitted:", formData);
+    setIsLoading(true);
+    setNotification({ message: "", type: "" });
 
-    // Opcional: resetear el formulario después del envío
-    // setFormData({ name: '', email: '', phone: '', message: '' });
+    try {
+      const response = await fetch("/api/send-emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName: formData.name.split(" ")[0] || formData.name,
+          lastName: formData.name.split(" ").slice(1).join(" ") || "",
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setNotification({
+          message:
+            "Message sent successfully! You'll receive a confirmation email and we'll be in touch soon.",
+          type: "success",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setNotification({
+          message: data.message || "Error sending message",
+          type: "error",
+        });
+      }
+    } catch (error) {
+      setNotification({
+        message: "Connection error. Please try again.",
+        type: "error",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -113,10 +157,82 @@ export default function ContactForm() {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="w-full bg-sky-500 text-white py-4 px-6 text-lg rounded-md hover:bg-blue-600 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition-all duration-200 font-medium mt-4"
+          disabled={isLoading}
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded-lg transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 outline-none"
         >
-          Submit
+          {isLoading ? (
+            <span className="flex items-center justify-center">
+              <svg
+                className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              Sending...
+            </span>
+          ) : (
+            "Submit"
+          )}
         </button>
+
+        {notification.message && (
+          <div
+            className={`mt-6 p-4 rounded-lg ${
+              notification.type === "success"
+                ? "bg-green-50 text-green-800 border border-green-200"
+                : "bg-red-50 text-red-800 border border-red-200"
+            }`}
+          >
+            <div className="flex">
+              <div className="flex-shrink-0">
+                {notification.type === "success" ? (
+                  <svg
+                    className="h-5 w-5 text-green-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="h-5 w-5 text-red-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                )}
+              </div>
+              <div className="ml-3">
+                <p className="text-sm font-medium">{notification.message}</p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
