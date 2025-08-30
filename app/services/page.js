@@ -178,7 +178,7 @@ export default function Services() {
               <div className="flex flex-col gap-4 sm:gap-5 my-2 sm:my-4">
                 <div className="flex items-start sm:items-center gap-3 flex-col sm:flex-row">
                   <span className="bg-sky-100 rounded-full p-3 flex-shrink-0">
-                    <IconComponent className="text-sky-800 w-5 h-5 sm:w-6 sm:h-6" />
+                    <IconComponent className="text-sky-500 w-5 h-5 sm:w-6 sm:h-6" />
                   </span>
                   <h2 className="font-roboto font-semibold text-lg sm:text-xl lg:text-2xl text-gray-700">
                     {service.title}

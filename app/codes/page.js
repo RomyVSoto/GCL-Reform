@@ -97,7 +97,7 @@ export default function Codes() {
         <div className="space-y-6 flex-1">
           <div className="flex items-start sm:items-center gap-3">
             <span className="flex-shrink-0">
-              <Cable className="text-sky-800 size-6 md:size-8" />
+              <Cable className="text-sky-500 size-6 md:size-8" />
             </span>
             <h2 className="font-roboto font-bold text-xl md:text-2xl text-neutral-700">
               Fiber Optic Cable Standards
@@ -109,7 +109,7 @@ export default function Codes() {
               return (
                 <div key={index} className="flex p-3 md:p-4 gap-3 md:gap-4 border border-gray-300 rounded-xl shadow-xs hover:shadow-xl transition-all duration-200 max-w-full lg:max-w-lg items-start">
                   <span className="p-2 md:p-4 bg-sky-100 rounded-md flex-shrink-0">
-                    <IconComponent className="text-sky-800 size-5 md:size-6" />
+                    <IconComponent className="text-sky-500 size-5 md:size-6" />
                   </span>
                   <span className="flex flex-col flex-1 min-w-0">
                     <h2 className="font-roboto font-semibold font-medium text-lg md:text-xl text-neutral-700">
@@ -128,7 +128,7 @@ export default function Codes() {
         <div className="space-y-6 flex-1">
           <div className="flex items-start sm:items-center gap-3">
             <span className="flex-shrink-0">
-              <Server className="text-sky-800 size-6 md:size-8" />
+              <Server className="text-sky-500 size-6 md:size-8" />
             </span>
             <h2 className="font-roboto font-bold text-xl md:text-2xl text-neutral-700">
               Server Maintenance Standards
@@ -140,7 +140,7 @@ export default function Codes() {
               return (
                 <div key={index} className="flex p-3 md:p-4 gap-3 md:gap-4 border border-gray-300 rounded-xl shadow-xs hover:shadow-xl transition-all duration-200 max-w-full lg:max-w-lg items-start">
                   <span className="p-2 md:p-4 bg-sky-100 rounded-md flex-shrink-0">
-                    <IconComponent className="text-sky-800 size-5 md:size-6" />
+                    <IconComponent className="text-sky-500 size-5 md:size-6" />
                   </span>
                   <span className="flex flex-col flex-1 min-w-0">
                     <h2 className="font-roboto font-semibold font-medium text-lg md:text-xl text-neutral-700">

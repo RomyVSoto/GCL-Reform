@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -26,10 +27,10 @@ export default function Footer() {
           <div className="min-w-0">
             <span className="font-bold block mb-2 sm:mb-3 font-montserrat text-lg lg:text-xl text-black">Quick Links</span>
             <ul className="cursor-pointer space-y-1 sm:space-y-2">
-              <li className="hover:text-sky-500 transition-all duration-200 text-sm sm:text-base">About Us</li>
-              <li className="hover:text-sky-500 transition-all duration-200 text-sm sm:text-base">Services</li>
-              <li className="hover:text-sky-500 transition-all duration-200 text-sm sm:text-base">Codes & Standards</li>
-              <li className="hover:text-sky-500 transition-all duration-200 text-sm sm:text-base">Certifications</li>
+              <li className="hover:text-sky-500 transition-all duration-200 text-sm sm:text-base"><Link href="/about">About Us</Link></li>
+              <li className="hover:text-sky-500 transition-all duration-200 text-sm sm:text-base"><Link href="/services">Services</Link></li>
+              <li className="hover:text-sky-500 transition-all duration-200 text-sm sm:text-base"><Link href="/codes">Codes & Standards</Link></li>
+              <li className="hover:text-sky-500 transition-all duration-200 text-sm sm:text-base"><Link href="/certifications">Certifications</Link></li>
             </ul>
           </div>
           

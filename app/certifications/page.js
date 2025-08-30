@@ -47,15 +47,15 @@ const certifications = [
 
 export default function Certifications() {
   return (
-    <div className="flex flex-col gap-20 my-30 mx-40">
-      <secction className="flex flex-col gap-3 text-center max-w-2xl mx-auto">
+    <div className="flex flex-col gap-10 md:gap-20 my-10 md:my-20 lg:my-30 mx-4 md:mx-8 lg:mx-40">
+      <section className="flex flex-col gap-3 text-center max-w-2xl mx-auto">
         <h2 className="font-roboto font-bold text-4xl text-neutral-900">
           Certifications & Warranties
         </h2>
         <p className="font-montserrat font-extralight text-2xl">
           Your assurance of quality and reliability in every connection we make.
         </p>
-      </secction>
+      </section>
 
       <section className="flex flex-col gap-4 items-center">
         <div className="flex flex-col gap-10">
@@ -93,7 +93,7 @@ export default function Certifications() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-10 bg-white py-12 px-6">
+      <section className="flex flex-col gap-10 bg-white py-12">
         <div>
           <h2 className="font-roboto text-3xl font-bold font-roboto font-semibold text-3xl text-neutral-800 text-center">
             Our Commitment to Quality: Work Warranty

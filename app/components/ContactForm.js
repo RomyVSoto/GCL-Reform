@@ -21,8 +21,32 @@ export default function ContactForm() {
     }));
   };
 
+  const validateForm = () => {
+    const { name, email, message } = formData;
+    
+    if (!name.trim()) {
+      setNotification({ message: "Please enter your name", type: "error" });
+      return false;
+    }
+    
+    if (!email.trim() || !/\S+@\S+\.\S+/.test(email)) {
+      setNotification({ message: "Please enter a valid email", type: "error" });
+      return false;
+    }
+    
+    if (!message.trim()) {
+      setNotification({ message: "Please enter your message", type: "error" });
+      return false;
+    }
+    
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (!validateForm()) return;
+    
     setIsLoading(true);
     setNotification({ message: "", type: "" });
 
@@ -33,8 +57,7 @@ export default function ContactForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          firstName: formData.name.split(" ")[0] || formData.name,
-          lastName: formData.name.split(" ").slice(1).join(" ") || "",
+          name: formData.name,
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
@@ -45,8 +68,7 @@ export default function ContactForm() {
 
       if (response.ok) {
         setNotification({
-          message:
-            "Message sent successfully! You'll receive a confirmation email and we'll be in touch soon.",
+          message: "Message sent successfully! You'll receive a confirmation email and we'll be in touch soon.",
           type: "success",
         });
         setFormData({
@@ -55,15 +77,21 @@ export default function ContactForm() {
           phone: "",
           message: "",
         });
+        
+        // Auto-hide success message after 5 seconds
+        setTimeout(() => {
+          setNotification({ message: "", type: "" });
+        }, 5000);
       } else {
         setNotification({
-          message: data.message || "Error sending message",
+          message: data.message || "Error sending message. Please try again.",
           type: "error",
         });
       }
     } catch (error) {
+      console.error('Contact form error:', error);
       setNotification({
-        message: "Connection error. Please try again.",
+        message: "Connection error. Please check your internet and try again.",
         type: "error",
       });
     } finally {
