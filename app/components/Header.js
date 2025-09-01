@@ -17,7 +17,6 @@ export default function Header() {
               src="/logos/Logo_wname-dark.png"
               width={150}
               height={60}
-              alt="GCL Logo"
               className="h-auto w-24 sm:w-32 md:w-36 lg:w-40 xl:w-[150px]"
             />
           </Link>

@@ -12,7 +12,6 @@ export default function Footer() {
                 src="/logos/Logo.png" 
                 width={150} 
                 height={50} 
-                alt="Logo"
                 className="w-32 sm:w-36 lg:w-[150px] h-auto"
               />
             </div>

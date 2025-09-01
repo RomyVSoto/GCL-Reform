@@ -1,11 +1,9 @@
-// app/api/send-emails/route.js
 import nodemailer from 'nodemailer';
 
 export async function POST(request) {
   try {
     const { name, email, phone, message } = await request.json();
 
-    // Validaciones básicas
     if (!name || !email || !message) {
       return Response.json(
         { message: "Please fill in all required fields" },
@@ -21,7 +19,6 @@ export async function POST(request) {
       );
     }
 
-    // Configurar transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -33,7 +30,6 @@ export async function POST(request) {
     const COMPANY_EMAIL = process.env.EMAIL_USER;
     const CEO_EMAIL = process.env.CEO_EMAIL;
 
-    // Email de confirmación al usuario
     const userMailOptions = {
       from: COMPANY_EMAIL,
       to: email,
@@ -129,7 +125,7 @@ export async function POST(request) {
             <div class="contact-info">
               <strong>Global Communications Link</strong><br>
               Email: malmonte@globalclink.com<br>
-              Phone: +1 (XXX) XXX-XXXX
+              Phone: +1 (929) 384-2944
             </div>
             
             <div class="divider"></div>
@@ -140,7 +136,6 @@ export async function POST(request) {
       `,
     };
 
-    // Email interno para la empresa
     const companyMailOptions = {
       from: COMPANY_EMAIL,
       to: `${COMPANY_EMAIL}, ${CEO_EMAIL}`,
@@ -261,7 +256,6 @@ export async function POST(request) {
       `,
     };
 
-    // Enviar ambos emails
     await Promise.all([
       transporter.sendMail(userMailOptions),
       transporter.sendMail(companyMailOptions)

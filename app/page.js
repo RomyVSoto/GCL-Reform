@@ -60,13 +60,11 @@ export default function Home() {
         </div>
 
         <div className="relative z-30 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center min-h-[80vh]">
-          {/* Logo responsive */}
           <div className="mb-4 sm:mb-6 lg:mb-8">
             <Image
               src="/logos/Logo.png"
               width={400}
               height={200}
-              alt="Global Communications Link Logo"
               className="mx-auto w-48 h-auto sm:w-64 md:w-80 lg:w-96 xl:w-[400px] object-contain"
             />
           </div>
