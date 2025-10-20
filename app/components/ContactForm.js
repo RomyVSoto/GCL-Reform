@@ -51,7 +51,7 @@ export default function ContactForm() {
     setNotification({ message: "", type: "" });
 
     try {
-      const response = await fetch("/api/send-emails", {
+      const response = await fetch("https://gcl-backend.onrender.com/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,7 +78,6 @@ export default function ContactForm() {
           message: "",
         });
         
-        // Auto-hide success message after 5 seconds
         setTimeout(() => {
           setNotification({ message: "", type: "" });
         }, 5000);
@@ -102,7 +101,6 @@ export default function ContactForm() {
   return (
     <div className="bg-white rounded-lg shadow-2xl px-8 lg:px-10 py-10 lg:py-12 w-full">
       <div className="flex flex-col gap-6">
-        {/* Name Field */}
         <div>
           <label
             htmlFor="name"
@@ -122,7 +120,6 @@ export default function ContactForm() {
           />
         </div>
 
-        {/* Email Field */}
         <div>
           <label
             htmlFor="email"
@@ -142,7 +139,6 @@ export default function ContactForm() {
           />
         </div>
 
-        {/* Phone Number Field */}
         <div>
           <label
             htmlFor="phone"
@@ -161,7 +157,6 @@ export default function ContactForm() {
           />
         </div>
 
-        {/* Message Field */}
         <div>
           <label
             htmlFor="message"
@@ -181,7 +176,6 @@ export default function ContactForm() {
           />
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           onClick={handleSubmit}
