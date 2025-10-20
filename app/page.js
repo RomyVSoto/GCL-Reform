@@ -66,6 +66,7 @@ export default function Home() {
               width={400}
               height={200}
               className="mx-auto w-48 h-auto sm:w-64 md:w-80 lg:w-96 xl:w-[400px] object-contain"
+              alt="Logo"
             />
           </div>
 

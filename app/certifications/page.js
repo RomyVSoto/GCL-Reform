@@ -59,7 +59,7 @@ export default function Certifications() {
 
       <section className="flex flex-col gap-4 items-center">
         <div className="flex flex-col gap-10">
-          <section className="font-roboto font-semibold text-3xl text-neutral-800 text-center">
+          <section className="font-roboto font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-neutral-900 leading-tight">
             Our Certifications
           </section>
           <section className="flex flex-col">

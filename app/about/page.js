@@ -80,6 +80,7 @@ export default function Services() {
                 src="/personal/Manuel.png"
                 fill
                 className="rounded-full object-cover"
+                alt="President"
               />
             </div>
             <h3 className="font-montserrat font-semibold text-lg md:text-xl text-neutral-800">
@@ -97,6 +98,7 @@ export default function Services() {
                 src="/personal/Dary.jpg"
                 fill
                 className="rounded-full object-cover"
+                alt="CEO"
               />
             </div>
             <h3 className="font-montserrat font-semibold text-lg md:text-xl text-neutral-800">

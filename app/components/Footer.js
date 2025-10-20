@@ -13,6 +13,7 @@ export default function Footer() {
                 width={150} 
                 height={50} 
                 className="w-32 sm:w-36 lg:w-[150px] h-auto"
+                alt="Logo"
               />
             </div>
             <div className="flex flex-col space-y-1">

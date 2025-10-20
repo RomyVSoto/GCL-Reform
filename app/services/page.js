@@ -159,7 +159,7 @@ export default function Services() {
   return (
     <div className="flex flex-col gap-12 sm:gap-16 lg:gap-20 items-center my-16 sm:my-20 lg:my-30 px-4 sm:px-6 lg:px-8">
       <section className="flex flex-col gap-4 sm:gap-6 text-center max-w-2xl items-center">
-        <h2 className="font-roboto font-semibold text-2xl sm:text-3xl lg:text-4xl text-neutral-900">Our Services</h2>
+        <h2 className="font-roboto font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-neutral-900 leading-tight">Our Services</h2>
         <p className="font-montserrat text-base sm:text-lg lg:text-2xl text-gray-700 font-extralight px-4">
           Global Communications Link offers a comprehensive suite of services to
           meet all your fiber optic cabling and network infrastructure needs.

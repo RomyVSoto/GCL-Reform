@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
         className={`${roboto.variable} ${montserrat.variable} antialiased`}
       >
         <Header />
-        <main>{children}</main>
+        <main className="pt-20">{children}</main>
         <Footer />
       </body>
     </html>

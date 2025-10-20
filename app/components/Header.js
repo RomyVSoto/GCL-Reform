@@ -9,7 +9,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full h-20 bg-white relative z-50">
+    <nav className="fixed top-0 left-0 right-0 w-full h-20 bg-white shadow-md z-50">
       <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-20 xl:mx-40 px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
         <div className="flex-shrink-0">
           <Link href="/">
@@ -18,6 +18,7 @@ export default function Header() {
               width={150}
               height={60}
               className="h-auto w-24 sm:w-32 md:w-36 lg:w-40 xl:w-[150px]"
+              alt="Logo"
             />
           </Link>
         </div>

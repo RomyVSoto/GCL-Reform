@@ -84,7 +84,7 @@ export default function Codes() {
   return (
     <div className="flex flex-col gap-10 md:gap-20 my-10 md:my-20 lg:my-30 mx-4 md:mx-8 lg:mx-40">
       <section className="flex flex-col gap-3 text-center max-w-2xl mx-auto px-4">
-        <h2 className="font-roboto font-bold text-2xl md:text-3xl lg:text-4xl text-neutral-900">
+        <h2 className="font-roboto font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-neutral-900 leading-tight">
           Codes and Standards
         </h2>
         <p className="font-montserrat font-extralight text-lg md:text-xl lg:text-2xl">

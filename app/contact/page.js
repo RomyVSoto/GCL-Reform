@@ -12,10 +12,7 @@ export default function Codes() {
             Get in Touch
           </h2>
           <p className="font-montserrat font-normal text-base lg:text-lg text-gray-500">
-            Ready to start your next network project? Contact our experienced
-            team today to discuss your fiber optic installation, testing, or
-            maintenance needs. We're here to help you achieve optimal
-            connectivity.
+            {"Ready to start your next network project? Contact our experienced team today to discuss your fiber optic installation, testing, or maintenance needs. We're here to help you achieve optimalconnectivity."}
           </p>
         </section>
         <section className="flex flex-col gap-6 lg:gap-8">
@@ -60,7 +57,7 @@ export default function Codes() {
           </div>
         </section>
       </div>
-      
+
       <div className="w-full lg:w-1/2">
         <ContactForm />
       </div>
