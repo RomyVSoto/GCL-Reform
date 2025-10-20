@@ -51,7 +51,7 @@ export default function ContactForm() {
     setNotification({ message: "", type: "" });
 
     try {
-      const response = await fetch("https://gcl-backend.onrender.com/api/send-email", {
+      const response = await fetch("https://gcl-backend.onrender.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
